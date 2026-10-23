@@ -1,4 +1,4 @@
-package com.example.idioma_app
+package com.example.mate_app
 
 import io.flutter.embedding.android.FlutterActivity
 

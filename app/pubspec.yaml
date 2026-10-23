@@ -1,5 +1,5 @@
-name: idioma_app
-description: "The Flutter app for the Idioma monorepo."
+name: mate_app
+description: "The Mate app."
 publish_to: 'none'
 version: 1.0.0+1
 

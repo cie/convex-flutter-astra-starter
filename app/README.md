@@ -1,4 +1,4 @@
-# idioma_app
+# mate_app
 
 A new Flutter project.
 

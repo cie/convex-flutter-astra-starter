@@ -1,6 +1,6 @@
 {
-    "name": "idioma_app",
-    "short_name": "idioma_app",
+    "name": "mate_app",
+    "short_name": "mate_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
