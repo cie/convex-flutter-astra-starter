@@ -124,6 +124,16 @@ class _CommentsPageState extends State<CommentsPage> {
       );
       _authorController.clear();
       _contentController.clear();
+    } on Exception catch (e) {
+      final message = e.toString();
+      final isVoidMutationBug =
+          message.contains('No result in mutation response');
+      if (isVoidMutationBug) {
+        _authorController.clear();
+        _contentController.clear();
+      } else if (mounted) {
+        setState(() => _error = 'Submission failed, try again.');
+      }
     } catch (e) {
       if (mounted) setState(() => _error = 'Submission failed, try again.');
     } finally {
