@@ -1,0 +1,19 @@
+{
+  // Start dev automatically when the workspace opens
+  "autorun": true,
+  "autokill": true,
+
+  "terminals": [
+    {
+      "name": "Dev",
+      "description": "Convex + Vite dev server (bun dev)",
+      "icon": "rocket",
+      "color": "terminal.ansiCyan",
+      "cwd": "${workspaceFolder}",
+      "command": "bun dev",
+      "autorun": true,
+      "autokill": true,
+      "open": true
+    }
+  ]
+}

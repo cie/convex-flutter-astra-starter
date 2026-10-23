@@ -1,0 +1,11 @@
+{
+  "name": "@idioma/root",
+  "private": true,
+  "workspaces": ["app", "web"],
+  "scripts": {
+    "dev": "concurrently --names \"APP,WEB\" -c \"blue,green\" \"bun run --cwd app dev\" \"bun run --cwd web dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@idioma/app",
+  "private": true,
+  "scripts": {
+    "dev": "flutter run -d chrome"
+  }
+}
