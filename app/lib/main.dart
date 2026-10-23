@@ -66,14 +66,23 @@ class _CommentsPageState extends State<CommentsPage> {
   List<Comment>? _comments;
   bool _submitting = false;
   String? _error;
+  StreamSubscription<WebSocketConnectionState>? _connectionSub;
+  bool _subscribed = false;
 
   @override
   void initState() {
     super.initState();
-    _subscribe();
+    _connectionSub = ConvexClient.instance.connectionState.listen((state) {
+      if (state == WebSocketConnectionState.connected && !_subscribed) {
+        _subscribe();
+      } else if (state != WebSocketConnectionState.connected) {
+        _subscribed = false;
+      }
+    });
   }
 
   void _subscribe() {
+    _subscribed = true;
     ConvexClient.instance
         .subscribe(
       name: 'comments:list',
@@ -90,6 +99,7 @@ class _CommentsPageState extends State<CommentsPage> {
       onError: (message, value) {
         if (!mounted) return;
         setState(() => _error = message);
+        _subscribed = false;
       },
     )
         .then((handle) => _subscription = handle);
@@ -124,6 +134,7 @@ class _CommentsPageState extends State<CommentsPage> {
   @override
   void dispose() {
     _subscription?.cancel();
+    _connectionSub?.cancel();
     _authorController.dispose();
     _contentController.dispose();
     super.dispose();
