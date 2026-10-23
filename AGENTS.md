@@ -1,10 +1,7 @@
-A monorepo:
+This is a monorepo:
+- convex/ is Convex backend
 - web/ is Astro website
 - app/ is Flutter app
-
-# Commiting
-
-When done, do a commit, but only your edited files (other agents might work parallelly).
 
 <!-- convex-ai-start -->
 
@@ -19,3 +16,8 @@ Convex agent skills for common tasks can be installed by running
 `npx convex ai-files install`.
 
 <!-- convex-ai-end -->
+
+
+# Commiting
+
+When done, do a commit, but only your edited files (other agents might work parallelly).
