@@ -1,9 +1,9 @@
 {
-  "name": "@idioma/web",
+  "name": "@mate/web",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "convex dev --start 'astro dev --port 1231'",
+    "dev": "astro dev --port 1231",
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write ."
@@ -13,7 +13,6 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "astro": "7.4.2",
-    "convex": "^1.48.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },

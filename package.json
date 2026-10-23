@@ -1,11 +1,12 @@
 {
-  "name": "@idioma/root",
+  "name": "@mate/root",
   "private": true,
   "workspaces": ["app", "web"],
   "scripts": {
-    "dev": "concurrently --names \"APP,WEB\" -c \"blue,green\" \"bun run --cwd app dev\" \"bun run --cwd web dev\""
+    "dev": "convex dev --start 'concurrently --names \"APP,WEB\" -c \"blue,green\" \"bun run --cwd app dev\" \"bun run --cwd web dev\"'"
   },
   "devDependencies": {
+    "convex": "^1.48.0",
     "concurrently": "^9.1.2"
   }
 }

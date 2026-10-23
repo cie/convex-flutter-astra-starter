@@ -1,5 +1,5 @@
 import { useQuery } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { api } from "../../../convex/_generated/api";
 import { withConvexProvider } from "../lib/convex.tsx";
 
 export default withConvexProvider(function CommentList() {

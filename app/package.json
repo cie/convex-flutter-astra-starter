@@ -1,5 +1,5 @@
 {
-  "name": "@idioma/app",
+  "name": "@mate/app",
   "private": true,
   "scripts": {
     "dev": "flutter run -d chrome"
